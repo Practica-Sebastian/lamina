@@ -153,7 +153,7 @@ const clone=o=>JSON.parse(JSON.stringify(o));
    Todo lo que se guarda va al Worker "lamina-api". Administrador y operario ven lo mismo:
    la app consulta cada 5 s si hubo cambios y los trae. Si no hay internet, lo guardado
    queda en una cola en este dispositivo y se envía solo al volver la conexión. */
-const API_LAMINA='https://lamina-api.sebastian-e64.workers.dev'; // ← URL de tu Worker (sin barra al final)
+const API_LAMINA='https://control.sebastian-e64.workers.dev'; // ← URL de tu Worker (sin barra al final)
 const apiURL=p=>API_LAMINA.replace(/\/+$/,'')+p;
 let SRV=[],OUT=[],VER=-1,PIN='',conexion='conectando…',empujando=false,trayendo=false;
 try{SRV=JSON.parse(localStorage.getItem('mm_srv')||'[]')}catch{SRV=[]}
